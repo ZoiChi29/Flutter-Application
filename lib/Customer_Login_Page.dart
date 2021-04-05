@@ -9,6 +9,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:sdp/Customer_Regestration_Page.dart';
 import 'package:flutter/services.dart';
+import 'package:sdp/User_Home_Page.dart';
 
 class CusPage extends StatefulWidget {
   @override
@@ -48,8 +49,8 @@ class _CusPageState extends State<CusPage> {
             toastLength: Toast.LENGTH_SHORT);
       } else {
         if (json.decode(res.body) == "Success") {
-          //Navigator.push(
-          //context, MaterialPageRoute(builder: (context) => customerHomePage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
         }
         //print(jsonDecode(res.body));
       }
