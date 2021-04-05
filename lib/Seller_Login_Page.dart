@@ -6,6 +6,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:sdp/Customer_Regestration_Page.dart';
 import 'package:flutter/services.dart';
+import 'package:sdp/Seller_Home_Page.dart';
 import 'package:sdp/Seller_Regestration_Page.dart';
 
 class sellerLoginPage extends StatefulWidget {
@@ -46,8 +47,8 @@ class _sellerLoginPageState extends State<sellerLoginPage> {
             toastLength: Toast.LENGTH_SHORT);
       } else {
         if (json.decode(res.body) == "Success") {
-          //Navigator.push(
-          //context, MaterialPageRoute(builder: (context) => sellerHomePage()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => SellerHomePage()));
         }
         //print(jsonDecode(res.body));
       }
